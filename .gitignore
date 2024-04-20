@@ -3,6 +3,6 @@ node_modules
 
 **/.env
 
-**/build
+shop-ts-backend/build
 
-**/shop-ts-backend/public
+shop-ts-backend/public
