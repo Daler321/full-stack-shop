@@ -35,20 +35,3 @@ export async function getAllOrdersReq(token: string): Promise<IOrderFetch[]> {
 
   return ordersRes;
 }
-
-// export async function getOneOrders(
-//   token: string,
-//   orderId: number
-// ): Promise<IOrderFetch> {
-//   const response = await fetch(`${process.env.REACT_APP_BASE_URL}/order/one`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       Authorization: `Bearer ${token}`,
-//       orderId: orderId.toString(),
-//     },
-//   });
-
-//   const orderRes = await response.json();
-//   return orderRes;
-// }

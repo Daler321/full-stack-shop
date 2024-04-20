@@ -16,23 +16,6 @@ export async function getAllCommentsReq(token: string): Promise<IComment[]> {
   return comments;
 }
 
-// export async function getOneComment(
-//   token: string,
-//   productId: number
-// ): Promise<IComment[]> {
-//   const response = await fetch(`${process.env.REACT_APP_BASE_URL}/comments/getone`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       Authorization: `Bearer ${token}`,
-//       itemId: productId.toString(),
-//     },
-//   });
-
-//   const comment = await response.json();
-//   return comment;
-// }
-
 export async function addCommentReq(
   token: string,
   comment: ICommentToAdd
