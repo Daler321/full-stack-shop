@@ -1,7 +1,8 @@
+node_modules
 **/node_modules
 
-.env
+**/.env
 
 **/build
 
-*/shop-ts-backend/public
+**/shop-ts-backend/public
