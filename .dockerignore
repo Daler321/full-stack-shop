@@ -1,0 +1,8 @@
+.git
+.env
+
+*/node_modules
+
+shop-ts-backend/public
+
+shop-ts-backend/build

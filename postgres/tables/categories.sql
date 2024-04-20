@@ -1,0 +1,9 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE categories (
+  id serial PRIMARY KEY,
+  name VARCHAR(255),
+  img VARCHAR(255)
+);
+
+COMMIT;

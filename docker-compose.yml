@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+  postgres:
+    container_name: postgres
+    build: ./postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_URL: postgres://postgres:password@localhost:5432/full-stack-shop
+      POSTGRES_DB: full-stack-shop
+      POSTGRES_HOST: postgres
+    ports:
+      - '5432:5432'
+
+  redis:
+    container_name: redis
+    image: redis:6.2-alpine
+    ports:
+      - '6379:6379'
+
+  full-stack-shop:
+    container_name: full-stack-shop
+    build: ./
+    volumes:
+      - ./:/usr/src/full-stack-shop
+    command: yarn run deploy
+    working_dir: /usr/src/full-stack-shop
+    ports:
+      - '8000:8000'
+    environment:
+      POSTGRES_URI: postgres://postgres:password@postgres:5432/full-stack-shop
+      REDIS_URI: redis://redis:6379
+      JWT_SECRET_KEY: thisisthesecretkey
+      REACT_APP_BASE_URL: /v1

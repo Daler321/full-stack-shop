@@ -1,0 +1,11 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE usersInfo(
+  id serial PRIMARY KEY,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  phonenumber VARCHAR(255) NOT NULL,
+  address JSON NOT NULL
+);
+
+COMMIT;

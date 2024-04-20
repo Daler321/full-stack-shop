@@ -1,0 +1,15 @@
+{
+  "name": "full-stack-shop",
+  "version": "1.0.1",
+  "scripts": {
+    "install-server": "yarn --cwd ./shop-ts-backend install",
+    "install-client": "yarn --cwd ./shop-ts install",
+    "install": "yarn run install-server && yarn run install-client",
+    "server": "yarn --cwd ./shop-ts-backend run watch",
+    "client": "yarn --cwd ./shop-ts start",
+    "watch": "yarn run server & yarn run client",
+    "deploy": "yarn --cwd ./shop-ts run build && yarn --cwd ./shop-ts-backend start"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}

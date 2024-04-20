@@ -1,0 +1,13 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE comments (
+  id serial PRIMARY KEY,
+  body text,
+  rating INTEGER NOT NULL,
+  productid INTEGER NOT NULL,
+  userid INTEGER NOT NULL,
+  username text NOT NULL,
+  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+COMMIT;

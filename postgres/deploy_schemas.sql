@@ -1,0 +1,6 @@
+\i '/docker-entrypoint-initdb.d/tables/users.sql'
+\i '/docker-entrypoint-initdb.d/tables/usersInfo.sql'
+\i '/docker-entrypoint-initdb.d/tables/categories.sql'
+\i '/docker-entrypoint-initdb.d/tables/comments.sql'
+\i '/docker-entrypoint-initdb.d/tables/orders.sql'
+\i '/docker-entrypoint-initdb.d/tables/products.sql'
